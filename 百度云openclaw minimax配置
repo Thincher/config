@@ -1,0 +1,184 @@
+```
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.9",
+    "lastTouchedAt": "2026-02-16T03:05:51.380Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-11T16:47:52.963Z",
+    "lastRunVersion": "2026.2.9",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/v1",
+        "apiKey": "__OPENCLAW_REDACTED__",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax-M2.5",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 98304,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "minimax/MiniMax-M2.5"
+      },
+      "workspace": "/root/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "cron": {
+    "enabled": true
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "lan",
+    "controlUi": {
+      "enabled": true,
+      "allowInsecureAuth": true
+    },
+    "auth": {
+      "mode": "token",
+      "token": "__OPENCLAW_REDACTED__"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "http": {
+      "endpoints": {
+        "responses": {
+          "enabled": true
+        }
+      }
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "skills": {
+    "entries": {
+      "baidu-search": {
+        "enabled": true,
+        "env": {
+          "BAIDU_API_KEY": "__OPENCLAW_REDACTED__"
+        }
+      },
+      "baidu-scholar-search-skill": {
+        "enabled": true,
+        "env": {
+          "BAIDU_API_KEY": "__OPENCLAW_REDACTED__"
+        }
+      },
+      "ai-notes-ofvideo": {
+        "enabled": true,
+        "env": {
+          "BAIDU_API_KEY": "__OPENCLAW_REDACTED__"
+        }
+      },
+      "deepresearch-conversation": {
+        "enabled": true,
+        "env": {
+          "BAIDU_API_KEY": "__OPENCLAW_REDACTED__"
+        }
+      },
+      "baidu-baike-data": {
+        "enabled": true,
+        "env": {
+          "BAIDU_API_KEY": "__OPENCLAW_REDACTED__"
+        }
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true
+      },
+      "dingtalk-connector": {
+        "enabled": true
+      },
+      "wecom": {
+        "enabled": true
+      },
+      "qqbot": {
+        "enabled": true
+      },
+      "openclaw-baiduapp": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "dingtalk-connector": {
+        "source": "npm",
+        "spec": "https://github.com/DingTalk-Real-AI/dingtalk-moltbot-connector.git",
+        "installPath": "/root/.openclaw/extensions/dingtalk-connector",
+        "version": "0.6.0",
+        "installedAt": "2026-02-11T17:06:14.806Z"
+      },
+      "wecom": {
+        "source": "npm",
+        "spec": "@openclaw-china/wecom",
+        "installPath": "/root/.openclaw/extensions/wecom",
+        "version": "0.1.20",
+        "installedAt": "2026-02-11T17:06:48.953Z"
+      },
+      "qqbot": {
+        "source": "path",
+        "sourcePath": "/root/qqbot",
+        "installPath": "/root/.openclaw/extensions/qqbot",
+        "version": "1.4.4",
+        "installedAt": "2026-02-12T05:46:47.962Z"
+      },
+      "openclaw-baiduapp": {
+        "source": "npm",
+        "spec": "@searchfe/openclaw-baiduapp@0.1.6",
+        "installPath": "/root/.openclaw/extensions/openclaw-baiduapp",
+        "version": "0.1.6",
+        "installedAt": "2026-02-13T17:02:55.293Z"
+      }
+    }
+  }
+}
+```
